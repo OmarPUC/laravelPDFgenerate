@@ -16,4 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('minacarton', 'MinacartonController@create')->name('minacarton.create');
+
 Route::post('minacarton', 'MinacartonController@store')->name('minacarton.store');
+
+Route::get('minacarton/list', 'MinacartonController@index')->name('minacarton.index');

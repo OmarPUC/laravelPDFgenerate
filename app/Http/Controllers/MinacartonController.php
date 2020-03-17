@@ -15,7 +15,9 @@ class MinacartonController extends Controller
      */
     public function index()
     {
-        //
+        $shows = Minacarton::all();
+
+        return view('list', compact('shows'));
     }
 
     /**

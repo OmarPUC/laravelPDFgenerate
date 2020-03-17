@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('disneyplus.store') }}">
+      <form method="post" action="{{ route('minacarton.store') }}">
           <div class="form-group">
               @csrf
               <label for="name">Show Name:</label>
