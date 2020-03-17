@@ -15,6 +15,7 @@
       <td>{{$show->show_name}}</td>
       <td>{{$show->series}}</td>
       <td>{{$show->lead_actor}}</td>
+      <td><a href="{{action('MinacartonController@downloadPDF', $show->id)}}">Download PDF</a></td>
     </tr>
     @endforeach
   </tbody>
