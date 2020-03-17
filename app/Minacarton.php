@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Minacarton extends Model
 {
-    //
+    protected $fillable = ['show_name', 'series', 'lead_actor'];
 }

@@ -25,7 +25,7 @@ class MinacartonController extends Controller
      */
     public function create()
     {
-        //
+        return view('form');
     }
 
     /**
@@ -36,7 +36,14 @@ class MinacartonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+          'show_name' => 'required|max:255',
+          'series' => 'required|max:255',
+          'lead_actor' => 'required|max:255',
+        ]);
+        Minacarton::create($validateData);
+
+        return redirect('/minacarton')->with('success','Mina carton show is successfully saved.');
     }
 
     /**
