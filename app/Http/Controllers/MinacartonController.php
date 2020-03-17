@@ -92,4 +92,11 @@ class MinacartonController extends Controller
     {
         //
     }
+
+    public function downloadPDF($id) {
+        $show = Minacarton::find($id);
+        $pdf = PDF::loadView('pdf', compact('show'));
+
+        return $pdf->download('mina.pdf');
+      }
 }
